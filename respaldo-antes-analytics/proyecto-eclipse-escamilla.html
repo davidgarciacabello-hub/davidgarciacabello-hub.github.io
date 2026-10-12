@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>El eclipse solar sobre Escamilla | David García</title>
+  <meta name="description" content="El proyecto fotográfico del eclipse solar sobre Escamilla: planificación con PhotoPills, perlas de Baily, totalidad, equipo Pentax y montaje de la secuencia.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #242424;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .contenedor {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 23px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .navegacion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    /* Nombre de la web: misma tipografía, sin subrayado */
+    a.marca,
+    a.marca:link,
+    a.marca:visited,
+    a.marca:hover,
+    a.marca:active {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      text-decoration: none;
+      color: #242424;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #555;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #111;
+    }
+
+    .introduccion {
+      max-width: 800px;
+      margin: 68px auto 38px;
+      text-align: center;
+    }
+
+    .categoria {
+      margin: 0 0 12px;
+      color: #777;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 22px;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .subtitulo {
+      max-width: 670px;
+      margin: 0 auto;
+      color: #666;
+      font-size: 17px;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .imagen-principal {
+      margin-bottom: 70px;
+    }
+
+    .imagen-principal img {
+      width: 100%;
+      height: auto;
+      max-height: 850px;
+      object-fit: contain;
+    }
+
+    figcaption {
+      margin-top: 10px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    .imagen-principal figcaption {
+      text-align: right;
+    }
+
+    .contenido {
+      max-width: 790px;
+      margin: 0 auto;
+    }
+
+    .seccion {
+      margin-bottom: 68px;
+    }
+
+    .numero {
+      margin: 0 0 8px;
+      color: #888;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 20px;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 0 0 18px;
+      font-size: 15px;
+    }
+
+    .imagen-destacada {
+      margin: 28px 0;
+    }
+
+    .imagen-destacada img {
+      width: 100%;
+      height: auto;
+      max-height: 680px;
+      object-fit: contain;
+    }
+
+    .galeria-dos {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin: 28px 0;
+      align-items: start;
+    }
+
+    .galeria-dos img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .texto-imagen {
+      margin-top: 12px;
+    }
+
+    .texto-imagen h3 {
+      margin-bottom: 5px;
+    }
+
+    .texto-imagen p {
+      margin: 0;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .bloque-tecnico {
+      padding: 28px 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    .bloque-tecnico p {
+      margin-bottom: 9px;
+    }
+
+    .bloque-tecnico p:last-child {
+      margin-bottom: 0;
+    }
+
+    .volver {
+      margin: 70px 0 20px;
+      padding-top: 30px;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+
+    .boton-volver {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      font-size: 13px;
+      text-decoration: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .boton-volver:hover {
+      border-color: #222;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 28px 0;
+      border-top: 1px solid #eee;
+      color: #777;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      .navegacion {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px 16px;
+      }
+
+      .introduccion {
+        margin-top: 42px;
+      }
+
+      .subtitulo {
+        font-size: 15px;
+      }
+
+      .galeria-dos {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .seccion {
+        margin-bottom: 52px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="contenedor navegacion">
+      <a class="marca" href="index.html">David García - Astrofotógrafo</a>
+
+      <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="instagram.html">Instagram</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <section class="introduccion">
+      <p class="categoria">Proyecto · Fotografía astronómica</p>
+
+      <h1>El eclipse solar sobre Escamilla</h1>
+
+      <p class="subtitulo">
+        La evolución del eclipse, las perlas de Baily y la totalidad,
+        integradas en una composición donde el cielo y el paisaje
+        comparten protagonismo.
+      </p>
+    </section>
+
+    <figure class="imagen-principal">
+      <img
+        src="images/eclipse-solar-escamilla.jpg"
+        alt="Panorámica del eclipse solar y su evolución sobre el paisaje de Escamilla."
+      >
+      <figcaption>
+        Escamilla · La secuencia completa del eclipse sobre el paisaje.
+      </figcaption>
+    </figure>
+
+    <article class="contenido">
+
+      <section class="seccion">
+        <p class="numero">01 · La idea</p>
+
+        <h2>Un fenómeno que había que anticipar</h2>
+
+        <p>
+          Hay fotografías que dependen de un instante irrepetible.
+          Para conseguirlas, el trabajo comienza mucho antes de que
+          ese momento llegue.
+        </p>
+
+        <p>
+          En Escamilla quise fotografiar el eclipse solar de una forma
+          diferente: no mostrar únicamente el Sol eclipsado, sino
+          registrar su evolución e integrarla en el paisaje, utilizando
+          la iglesia y su torre como referencias de la composición.
+        </p>
+
+        <p>
+          El objetivo era reunir en una sola imagen distintas fases
+          del fenómeno y conservar la relación entre el cielo y el
+          lugar desde el que lo observaba.
+        </p>
+      </section>
+
+      <section class="seccion">
+        <p class="numero">02 · Planificación</p>
+
+        <h2>Preparar el encuadre antes de la sesión</h2>
+
+        <p>
+          La posición del Sol respecto a la iglesia y el horizonte
+          requería estudiar el lugar con antelación. Utilicé PhotoPills
+          para planificar el encuadre y anticipar la posición del
+          fenómeno durante la sesión.
+        </p>
+
+        <p>
+          También realicé pruebas previas para comprobar la posición
+          prevista del Sol y preparar el sistema de fotografía solar.
+          La planificación era esencial: durante el eclipse no habría
+          tiempo para improvisar el encuadre.
+        </p>
+
+        <figure class="imagen-destacada">
+          <img
+            src="images/giralda-escamilla.jpg"
+            alt="Iglesia de Escamilla utilizada como referencia para planificar la composición del eclipse."
+            loading="lazy"
+          >
+          <figcaption>
+            La iglesia de Escamilla, una referencia fundamental para
+            situar el fenómeno dentro del paisaje.
+          </figcaption>
+        </figure>
+
+        <p>
+          La arquitectura no era un simple fondo. Formaba parte de
+          la imagen que quería construir y ayudaba a situar el eclipse
+          en un lugar concreto.
+        </p>
+      </section>
+
+      <section class="seccion">
+        <p class="numero">03 · Los instantes decisivos</p>
+
+        <h2>Las perlas de Baily</h2>
+
+        <p>
+          En los momentos próximos a la totalidad, la luz solar puede
+          atravesar los valles del borde lunar y aparecer en forma de
+          pequeños puntos luminosos. Este fenómeno se conoce como
+          perlas de Baily.
+        </p>
+
+        <p>
+          Son instantes muy breves y exigen prestar atención tanto a
+          la evolución del eclipse como a los parámetros de exposición.
+          Por eso forman parte de las imágenes que ayudan a comprender
+          la complejidad de la sesión.
+        </p>
+
+        <div class="galeria-dos">
+          <figure>
+            <img
+              src="images/perlas-uno.jpg"
+              alt="Primer detalle de las perlas de Baily durante el eclipse solar."
+              loading="lazy"
+            >
+            <figcaption class="texto-imagen">
+              <h3>Perlas de Baily I</h3>
+              <p>Un instante fugaz en el borde de la Luna.</p>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img
+              src="images/perlas-dos.jpg"
+              alt="Segundo detalle de las perlas de Baily durante el eclipse solar."
+              loading="lazy"
+            >
+            <figcaption class="texto-imagen">
+              <h3>Perlas de Baily II</h3>
+              <p>Otro momento de una fase que dura apenas unos instantes.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <p class="numero">04 · La totalidad</p>
+
+        <h2>El momento central del eclipse</h2>
+
+        <p>
+          La totalidad es una fase distinta a las anteriores y requiere
+          adaptar la exposición a las condiciones de luz del momento.
+          En esta parte de la sesión, cada segundo cuenta y la preparación
+          previa permite concentrarse en la captura.
+        </p>
+
+        <figure class="imagen-destacada">
+          <img
+            src="images/eclipse-total.jpg"
+            alt="Fotografía del eclipse solar durante la totalidad."
+            loading="lazy"
+          >
+          <figcaption>
+            La totalidad, una de las fases centrales de la sesión.
+          </figcaption>
+        </figure>
+
+        <p>
+          Esta imagen permite detenerse en el fenómeno y observarlo
+          de manera independiente, más allá de la secuencia completa
+          que aparece en la panorámica.
+        </p>
+      </section>
+
+      <section class="seccion">
+        <p class="numero">05 · Captura y montaje</p>
+
+        <h2>De cientos de fotografías a una sola composición</h2>
+
+        <p>
+          La imagen final se construyó a partir de una sesión de
+          aproximadamente 325 fotografías. De ese conjunto seleccioné
+          64 fotogramas clave, tomados a intervalos de unos dos minutos
+          y medio, para representar la evolución del eclipse.
+        </p>
+
+        <p>
+          Las tomas se realizaron con una Pentax K-1 Mark II y el
+          teleobjetivo Pentax DA* 150-450 mm, trabajando a 450 mm
+          para registrar el Sol. Para la referencia de la iglesia
+          utilicé una focal de 200 mm.
+        </p>
+
+        <p>
+          Las diferentes fases exigieron adaptar los parámetros de
+          captura a las condiciones de luz. Posteriormente, la selección
+          y el montaje permitieron integrar las distintas posiciones
+          del Sol en una composición única.
+        </p>
+
+        <p>
+          El reto no consistía solo en reunir las fotografías, sino
+          en mantener una lectura coherente del paisaje y mostrar
+          con claridad la evolución del fenómeno.
+        </p>
+      </section>
+
+      <section class="seccion bloque-tecnico">
+        <p class="numero">06 · Ficha técnica</p>
+
+        <h2>Equipo y herramientas</h2>
+
+        <p><strong>Cámara:</strong> Pentax K-1 Mark II.</p>
+        <p><strong>Objetivo principal:</strong> Pentax DA* 150-450 mm, utilizado a 450 mm para la secuencia solar.</p>
+        <p><strong>Referencia arquitectónica:</strong> toma de la iglesia a 200 mm.</p>
+        <p><strong>Planificación:</strong> PhotoPills.</p>
+        <p><strong>Preparación:</strong> filtro solar adecuado y soporte preparado para la sesión.</p>
+        <p><strong>Proceso:</strong> captura secuencial, selección de fotogramas y montaje de la panorámica.</p>
+      </section>
+
+      <section class="seccion">
+        <p class="numero">07 · El resultado</p>
+
+        <h2>El eclipse y el paisaje, en una misma imagen</h2>
+
+        <p>
+          Este proyecto reúne dos aspectos que me interesan
+          especialmente en la astrofotografía: la planificación
+          precisa de un fenómeno astronómico y la búsqueda de una
+          composición que lo conecte con un lugar concreto.
+        </p>
+
+        <p>
+          La panorámica de Escamilla es el resultado visible de todo
+          ese trabajo previo, de la atención durante el eclipse y
+          de la selección posterior de las fotografías.
+        </p>
+
+        <p>
+          Más que una imagen aislada del Sol, quería conservar el
+          recuerdo de cómo se desarrolló el fenómeno sobre este
+          paisaje y cómo la arquitectura ayudó a darle contexto.
+        </p>
+      </section>
+
+      <div class="volver">
+        <a class="boton-volver" href="proyectos.html">
+          ← Volver a todos los proyectos
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      David García - Astrofotógrafo · Astrofotografía de paisaje
+    </div>
+  </footer>
+
+</body>
+</html>

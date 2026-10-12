@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Equipo | David García · Astrofotógrafo</title>
+  <meta name="description" content="Mi equipo de astrofotografía: Pentax K-1 Mark II, objetivos Pentax 16–50 mm f/2.8 y 150–450 mm, ASTROTRACER y Star AF.">
+
+  <style>
+    :root {
+      --page-width: 1200px;
+      --text: #202020;
+      --muted: #707070;
+      --line: #e8e8e8;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      padding: 25px 5%;
+    }
+
+    .header-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: #000;
+    }
+
+    .page-intro {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 76px 5% 54px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.08;
+      font-weight: 400;
+      letter-spacing: -0.045em;
+    }
+
+    .intro-text {
+      max-width: 650px;
+      margin: 23px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .equipment {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 0 5% 100px;
+    }
+
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+      align-items: start;
+    }
+
+    .equipment-card {
+      min-width: 0;
+    }
+
+    .equipment-image {
+      height: 310px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .equipment-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .item-number {
+      margin: 23px 0 10px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.3;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+    }
+
+    .equipment-card p:not(.item-number) {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .feature-section {
+      border-top: 1px solid var(--line);
+      padding: 76px 5%;
+    }
+
+    .feature-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 70px;
+      align-items: start;
+    }
+
+    .feature-heading h2 {
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .feature-heading > p:last-child {
+      max-width: 390px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .feature-copy h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .feature-copy p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .feature-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-note {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .closing-section {
+      border-top: 1px solid var(--line);
+      padding: 72px 5% 88px;
+    }
+
+    .closing-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .closing-inner h2 {
+      font-size: clamp(29px, 4vw, 42px);
+    }
+
+    .closing-inner > p:last-child {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 5%;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .equipment-grid {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 42px;
+      }
+
+      .feature-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .main-nav {
+        gap: 15px;
+      }
+
+      .page-intro {
+        padding-top: 54px;
+      }
+
+      .equipment-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .equipment-image {
+        height: 300px;
+      }
+
+      .feature-section {
+        padding-top: 54px;
+        padding-bottom: 54px;
+      }
+
+      .closing-section {
+        padding-top: 55px;
+        padding-bottom: 65px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        David García · Astrofotógrafo
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="equipo.html" aria-current="page">Equipo</a>
+        <a href="index.html#sobre-mi">Sobre mí</a>
+        <a href="instagram.html">Instagram</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-intro">
+      <p class="eyebrow">Herramientas para fotografiar el cielo</p>
+
+      <h1>Mi equipo</h1>
+
+      <p class="intro-text">
+        Mi equipo está formado por una cámara Pentax y dos objetivos que me
+        permiten abordar distintas formas de astrofotografía: desde la Vía
+        Láctea integrada en paisajes históricos hasta la Luna y los fenómenos
+        astronómicos que requieren mayor alcance. Más allá de las características
+        de cada elemento, valoro las herramientas que me permiten planificar,
+        trabajar en el campo y concentrarme en la composición.
+      </p>
+    </section>
+
+
+    <section class="equipment" aria-label="Cámara y objetivos">
+
+      <div class="equipment-grid">
+
+        <article class="equipment-card">
+
+          <div class="equipment-image">
+            <img
+              src="images/cuerpo-pentax.jpg"
+              alt="Cámara Pentax K-1 Mark II"
+              fetchpriority="high"
+            >
+          </div>
+
+          <p class="item-number">01 · CÁMARA</p>
+
+          <h2>Pentax K-1 Mark II</h2>
+
+          <p>
+            El centro de mi equipo. Su sensor de formato completo y sus
+            funciones específicas para fotografía nocturna me permiten
+            trabajar con el cielo y el paisaje como partes de una misma imagen.
+          </p>
+
+        </article>
+
+
+        <article class="equipment-card">
+
+          <div class="equipment-image">
+            <img
+              src="images/1650.jpg"
+              alt="Objetivo Pentax 16–50 mm f/2.8"
+              loading="lazy"
+            >
+          </div>
+
+          <p class="item-number">02 · GRAN ANGULAR</p>
+
+          <h2>Pentax 16–50 mm f/2.8</h2>
+
+          <p>
+            El objetivo que utilizo habitualmente para fotografiar la Vía
+            Láctea y los paisajes nocturnos. Su luminosidad permite captar
+            el firmamento e integrarlo con ermitas, árboles, ruinas y otros
+            elementos del entorno.
+          </p>
+
+        </article>
+
+
+        <article class="equipment-card">
+
+          <div class="equipment-image">
+            <img
+              src="images/150450.jpg"
+              alt="Teleobjetivo Pentax 150–450 mm"
+              loading="lazy"
+            >
+          </div>
+
+          <p class="item-number">03 · TELEOBJETIVO</p>
+
+          <h2>Pentax 150–450 mm</h2>
+
+          <p>
+            Para la Luna, los eclipses y los motivos que requieren mayor
+            alcance. Su perspectiva permite aislar detalles y relacionar
+            objetos astronómicos con puntos concretos del paisaje.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="feature-section" id="astrotracer">
+
+      <div class="feature-inner">
+
+        <div class="feature-heading">
+
+          <p class="eyebrow">Astrofotografía desde la cámara</p>
+
+          <h2>ASTROTRACER</h2>
+
+          <p>
+            Seguir el movimiento aparente de las estrellas sin añadir
+            necesariamente una montura de seguimiento externa.
+          </p>
+
+        </div>
+
+        <div class="feature-copy">
+
+          <h3>Una forma distinta de fotografiar el cielo</h3>
+
+          <p>
+            La Pentax K-1 Mark II incorpora ASTROTRACER, un sistema que utiliza
+            los datos de orientación de la cámara para desplazar el sensor y
+            compensar el movimiento aparente de las estrellas durante la
+            exposición.
+          </p>
+
+          <p>
+            En determinadas fotografías permite utilizar exposiciones más
+            largas y mantener las estrellas puntuales sin recurrir a una
+            montura ecuatorial motorizada adicional. Esto puede simplificar
+            el equipo que llevo a localizaciones oscuras y alejadas.
+          </p>
+
+          <p>
+            El resultado depende de factores como la focal, el tiempo de
+            exposición, la orientación y las condiciones de la toma. No es
+            un sustituto universal de una montura de seguimiento, pero sí
+            una herramienta muy útil para explorar la fotografía del cielo
+            con una configuración más sencilla.
+          </p>
+
+          <div class="feature-note">
+            <strong>Una consideración importante:</strong> cuando la cámara
+            sigue las estrellas, el paisaje puede aparecer movido. Para
+            conseguir estrellas y terreno nítidos en una misma imagen puede
+            ser necesario combinar exposiciones o elegir otra técnica.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="feature-section" id="star-af">
+
+      <div class="feature-inner">
+
+        <div class="feature-heading">
+
+          <p class="eyebrow">Enfoque nocturno</p>
+
+          <h2>Star AF</h2>
+
+          <p>
+            Una ayuda para resolver uno de los desafíos habituales de la
+            astrofotografía: enfocar con precisión cuando apenas hay luz.
+          </p>
+
+        </div>
+
+        <div class="feature-copy">
+
+          <h3>Enfocar las estrellas con más facilidad</h3>
+
+          <p>
+            La función Star AF, disponible a través de la función adicional
+            Astrophoto Assist para la Pentax K-1 Mark II, está diseñada para
+            facilitar el enfoque automático sobre las estrellas.
+          </p>
+
+          <p>
+            Es especialmente interesante en sesiones nocturnas en las que
+            el enfoque manual puede resultar complicado. Poder comprobar
+            el enfoque antes de comenzar una secuencia ayuda a trabajar con
+            mayor confianza y a dedicar más atención a la composición.
+          </p>
+
+          <p>
+            Su funcionamiento depende de la configuración, del objetivo
+            compatible y de las condiciones en las que se detectan las
+            estrellas. Por eso conviene comprobar la función disponible
+            en la cámara y en el firmware instalado.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="closing-section">
+
+      <div class="closing-inner">
+
+        <p class="eyebrow">Más allá del equipo</p>
+
+        <h2>La fotografía empieza antes de disparar</h2>
+
+        <p>
+          La cámara y los objetivos son solo una parte del proceso. La
+          planificación, la elección del lugar, la posición de la Vía Láctea
+          y el momento de la noche son igual de importantes para crear una
+          imagen en la que el paisaje y el firmamento compartan protagonismo.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+      <span>David García · Astrofotógrafo</span>
+      <span>Astrofotografía de paisaje</span>
+    </div>
+
+  </footer>
+
+</body>
+</html>

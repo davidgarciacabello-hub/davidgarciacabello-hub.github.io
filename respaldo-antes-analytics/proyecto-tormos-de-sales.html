@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Los Tormos de Sales bajo la Vía Láctea | David García</title>
+
+  <meta
+    name="description"
+    content="Astrofotografía de paisaje en Los Tormos de Sales: formaciones rocosas y la Vía Láctea de invierno, con una composición planificada para unir el paisaje y el cielo nocturno."
+  >
+
+  <meta name="author" content="David García">
+
+  <style>
+    :root {
+      --page-width: 1200px;
+      --text-width: 820px;
+      --text-color: #242424;
+      --muted-color: #707070;
+      --border-color: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text-color);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      width: 100%;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 22px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      color: var(--text-color);
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .main-nav a {
+      color: #555;
+      font-size: 13px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: #000;
+    }
+
+    .project-header {
+      max-width: var(--text-width);
+      margin: 0 auto;
+      padding: 78px 5% 42px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--muted-color);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4.5vw, 48px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .project-subtitle {
+      max-width: 650px;
+      margin: 20px auto 0;
+      color: #666;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .project-intro {
+      max-width: var(--text-width);
+      margin: 0 auto;
+      padding: 0 5% 52px;
+    }
+
+    .project-intro p,
+    .story p {
+      margin: 0 0 20px;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .image-section {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 4%;
+    }
+
+    .project-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: var(--page-width);
+      max-height: 1000px;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .image-caption {
+      max-width: var(--text-width);
+      margin: 14px auto 0;
+      padding: 0 5%;
+      color: var(--muted-color);
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: right;
+    }
+
+    .story {
+      max-width: var(--text-width);
+      margin: 0 auto;
+      padding: 58px 5% 76px;
+    }
+
+    .section-number {
+      margin: 0 0 10px;
+      color: var(--muted-color);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+    }
+
+    .project-end {
+      padding: 20px 5% 86px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid #d8d8d8;
+      color: var(--text-color);
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .back-link:hover {
+      background: #f7f7f7;
+      border-color: #aaa;
+    }
+
+    .site-footer {
+      padding: 25px 5%;
+      border-top: 1px solid var(--border-color);
+      color: var(--muted-color);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .main-nav {
+        justify-content: center;
+        gap: 12px 18px;
+      }
+
+      .project-header {
+        padding-top: 56px;
+      }
+
+      .image-section {
+        padding: 0 3%;
+      }
+
+      .story {
+        padding-top: 44px;
+        padding-bottom: 54px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand {
+        white-space: normal;
+        text-align: center;
+      }
+
+      .main-nav {
+        gap: 10px 14px;
+      }
+
+      .main-nav a {
+        font-size: 12px;
+      }
+
+      .project-subtitle {
+        font-size: 15px;
+      }
+
+      .project-intro p,
+      .story p {
+        font-size: 15px;
+      }
+
+      .image-section {
+        padding: 0 2%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        David García · Astrofotógrafo
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html" aria-current="page">Proyectos</a>
+        <a href="index.html#equipo">Equipo</a>
+        <a href="index.html#sobre-mi">Sobre mí</a>
+        <a href="instagram.html">Instagram</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="project-header">
+      <p class="eyebrow">Proyecto de astrofotografía</p>
+      <h1>Los Tormos de Sales</h1>
+      <p class="project-subtitle">
+        Formaciones rocosas y Vía Láctea de invierno:
+        el paisaje bajo otro cielo.
+      </p>
+    </section>
+
+    
+<section class="project-intro">
+  <p>
+    Hay lugares cuyo carácter cambia por completo cuando cae
+    la noche. En Los Tormos de Sales, las formaciones rocosas
+    ofrecen un paisaje con personalidad propia que adquiere
+    otra dimensión bajo el cielo estrellado.
+  </p>
+
+  <p>
+    Este proyecto reúne dos fotografías realizadas en épocas
+    diferentes del año: una con la Vía Láctea de invierno y otra
+    con la Vía Láctea de verano sobre el mismo entorno.
+  </p>
+
+  <p>
+    La planificación de cada sesión permitió trabajar con la
+    posición de la galaxia en distintas temporadas y mostrar
+    cómo cambia el cielo nocturno sobre un paisaje que permanece.
+  </p>
+</section>
+
+
+    <section class="image-section" aria-label="Los Tormos de Sales bajo la Vía Láctea">
+      <img
+        class="project-image"
+        src="images/tormos-invierno.jpg"
+        alt="Formaciones rocosas de Los Tormos de Sales bajo la Vía Láctea de invierno"
+        fetchpriority="high"
+      >
+      <p class="image-caption">
+        Los Tormos de Sales · Vía Láctea de invierno
+      </p>
+    </section>
+
+    <section class="story">
+  <p class="section-number">01 · El cielo de invierno</p>
+  <h2>La Vía Láctea en invierno</h2>
+
+  <p>
+    La primera fotografía muestra Los Tormos de Sales bajo
+    el cielo de invierno. La composición busca integrar las
+    formaciones rocosas con la estructura de la Vía Láctea,
+    dando protagonismo tanto al paisaje como al firmamento.
+  </p>
+
+  <p>
+    La posición de la galaxia y el encuadre fueron elementos
+    fundamentales para construir una imagen en la que el
+    terreno y el cielo se complementan.
+  </p>
+</section>
+
+<section class="image-section" aria-label="Los Tormos de Sales bajo la Vía Láctea de verano">
+  <img
+    class="project-image"
+    src="images/tormos-verano.jpg"
+    alt="Los Tormos de Sales bajo la Vía Láctea de verano"
+    loading="lazy"
+  >
+  <p class="image-caption">
+    Los Tormos de Sales · Vía Láctea de verano
+  </p>
+</section>
+
+<section class="story">
+  <p class="section-number">02 · El cielo de verano</p>
+  <h2>La Vía Láctea en verano</h2>
+
+  <p>
+    En otra época del año, el cielo ofrece una perspectiva
+    diferente de la Vía Láctea sobre este mismo entorno.
+    La segunda fotografía permite comparar ambas escenas
+    y apreciar cómo cambia la presencia de nuestra galaxia
+    a lo largo de las estaciones.
+  </p>
+
+  <p>
+    Aunque el paisaje permanece, la orientación y la apariencia
+    del cielo varían. Las dos imágenes muestran así dos momentos
+    diferentes del año, unidos por el mismo lugar y por la
+    intención de fotografiarlo bajo la Vía Láctea.
+  </p>
+</section>
+
+
+    <section class="project-end">
+      <a class="back-link" href="proyectos.html">
+        ← Volver a proyectos
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    © David García · Astrofotografía de paisaje
+  </footer>
+
+</body>
+</html>

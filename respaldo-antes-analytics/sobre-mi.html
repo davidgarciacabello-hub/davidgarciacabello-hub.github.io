@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sobre mí | David García · Astrofotógrafo</title>
+
+  <meta name="description" content="Conoce a David García, fotógrafo especializado en astrofotografía de paisaje, la Vía Láctea y los fenómenos astronómicos en lugares históricos.">
+
+  <style>
+    :root {
+      --page-width: 1200px;
+      --text: #202020;
+      --muted: #707070;
+      --line: #e8e8e8;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      padding: 25px 5%;
+    }
+
+    .header-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: #000;
+    }
+
+    .page-intro {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 76px 5% 55px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.08;
+      font-weight: 400;
+      letter-spacing: -0.045em;
+    }
+
+    .intro-text {
+      max-width: 650px;
+      margin: 23px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .about-main {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 0 5% 95px;
+    }
+
+    .about-profile {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 70px;
+      align-items: center;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .profile-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .profile-copy h2 {
+      margin: 0 0 24px;
+      font-size: clamp(28px, 3.5vw, 39px);
+      line-height: 1.25;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+    }
+
+    .profile-copy p,
+    .story-copy p {
+      margin: 0 0 19px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.95;
+    }
+
+    .profile-copy p:last-child,
+    .story-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-section {
+      border-top: 1px solid var(--line);
+      padding-top: 75px;
+      margin-top: 80px;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+      gap: 70px;
+      align-items: start;
+    }
+
+    .story-heading h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+    }
+
+    .story-copy {
+      max-width: 680px;
+    }
+
+    .eclipse-section {
+      border-top: 1px solid var(--line);
+      padding-top: 75px;
+      margin-top: 80px;
+    }
+
+    .eclipse-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 65px;
+      align-items: center;
+    }
+
+    .eclipse-image {
+      width: 100%;
+      height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .eclipse-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .eclipse-copy h2 {
+      margin: 0 0 22px;
+      font-size: clamp(28px, 3.5vw, 39px);
+      line-height: 1.25;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+    }
+
+    .eclipse-copy p {
+      margin: 0 0 19px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.95;
+    }
+
+    .eclipse-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .closing-section {
+      border-top: 1px solid var(--line);
+      margin-top: 80px;
+      padding-top: 70px;
+    }
+
+    .closing-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .closing-inner h2 {
+      margin: 0;
+      font-size: clamp(29px, 4vw, 42px);
+      line-height: 1.25;
+      font-weight: 400;
+      letter-spacing: -0.035em;
+    }
+
+    .closing-inner > p:last-child {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 5%;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 850px) {
+      .about-profile,
+      .story-grid,
+      .eclipse-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .profile-image {
+        height: 500px;
+      }
+
+      .story-section,
+      .eclipse-section {
+        margin-top: 60px;
+        padding-top: 55px;
+      }
+
+      .eclipse-image {
+        height: 380px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .main-nav {
+        gap: 15px;
+      }
+
+      .page-intro {
+        padding-top: 54px;
+      }
+
+      .profile-image {
+        height: 390px;
+      }
+
+      .eclipse-image {
+        height: 300px;
+      }
+
+      .closing-section {
+        margin-top: 55px;
+        padding-top: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        David García · Astrofotógrafo
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="sobre-mi.html" aria-current="page">Sobre mí</a>
+       <a href="instagram.html">Instagram</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <section class="page-intro">
+      <p class="eyebrow">La persona detrás de las fotografías</p>
+
+      <h1>Sobre mí</h1>
+
+      <p class="intro-text">
+        Una historia que comenzó con la fotografía analógica y que, con los
+        años, me llevó a mirar hacia el cielo nocturno y a descubrir otra
+        forma de fotografiar el paisaje.
+      </p>
+    </section>
+
+
+    <section class="about-main">
+
+      <!-- PRESENTACIÓN PERSONAL -->
+
+      <div class="about-profile">
+
+        <div class="profile-image">
+          <img
+            src="images/david.jpg"
+            alt="David García, fotógrafo de paisaje y astrofotografía"
+            fetchpriority="high"
+          >
+        </div>
+
+        <div class="profile-copy">
+
+          <p class="eyebrow">Mi historia</p>
+
+          <h2>Una mirada al cielo, desde el paisaje</h2>
+
+          <p>
+            Mi relación con la fotografía comenzó durante la etapa escolar,
+            cuando un profesor nos acercó al mundo de la fotografía analógica
+            y al proceso de revelado. Aquella primera experiencia despertó
+            una curiosidad que, con los años, terminaría convirtiéndose en
+            una forma de mirar el mundo.
+          </p>
+
+          <p>
+            Mi interés por la fotografía comenzó a tomar forma alrededor de 2010. Fue entonces cuando empecé a explorar la fotografía nocturna, acompañado por "José Luis Cifuentes - @jlvifuentes", con quien compartí aquellas primeras salidas bajo el cielo nocturno.
+
+Al principio fotografiábamos las luces de Madrid; poco a poco, mi curiosidad se fue desplazando hacia las estrellas, la Vía Láctea, la Luna y los fenómenos astronómicos. Aquellas primeras experiencias despertaron una pasión que, con el tiempo, me llevaría a buscar lugares con historia donde el paisaje y el firmamento pudieran encontrarse en una misma imagen.
+          </p>
+
+          <p>
+            Con el tiempo, la astrofotografía de paisaje se convirtió en
+            el eje de mi trabajo.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- CÓMO ENTIENDO LA ASTROFOTOGRAFÍA -->
+
+      <section class="story-section">
+
+        <div class="story-grid">
+
+          <div class="story-heading">
+            <p class="eyebrow">Mi forma de fotografiar</p>
+            <h2>El paisaje también cuenta una historia</h2>
+          </div>
+
+          <div class="story-copy">
+
+            <p>
+              Me interesa especialmente fotografiar el firmamento desde
+              lugares con historia, donde una ermita, unas ruinas, un árbol
+              o un paisaje reconocible aportan contexto y significado a lo
+              que sucede sobre el horizonte.
+            </p>
+
+            <p>
+              No busco fotografiar únicamente las estrellas. Me gusta que
+              el cielo y el lugar formen parte de una misma composición,
+              que quien vea la imagen pueda detenerse tanto en el paisaje
+              como en lo que ocurre sobre él.
+            </p>
+
+            <p>
+              Muchas de estas fotografías comienzan mucho antes de pulsar
+              el disparador. La planificación es esencial para encontrar
+              el lugar, la orientación y el momento adecuados. Herramientas
+              como PhotoPills me ayudan a anticipar la posición de la Vía
+              Láctea y de otros objetos celestes para buscar la composición
+              que imagino.
+            </p>
+
+            <p>
+              Pero no todo se puede planificar. Algunas de las experiencias
+              más memorables nacen de lo inesperado: un resplandor atmosférico,
+              unas condiciones especiales del cielo o un detalle que aparece
+              durante una sesión nocturna.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- FOTOGRAFÍA DURANTE EL ECLIPSE -->
+
+      <section class="eclipse-section">
+
+        <div class="eclipse-grid">
+
+          <div class="eclipse-image">
+            <img
+              src="images/sobre-mi.jpg"
+              alt="David García fotografiando el eclipse solar"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="eclipse-copy">
+
+            <p class="eyebrow">Planificación y paciencia</p>
+
+            <h2>Detrás de cada imagen hay una experiencia</h2>
+
+            <p>
+              Fotografiar fenómenos astronómicos exige estudiar con
+              antelación cómo se moverá el cielo y cómo se relacionará
+              con el paisaje. La posición del Sol o de la Luna, el horizonte
+              y el encuadre pueden convertir una escena en una imagen única.
+            </p>
+
+            <p>
+              En una sesión como la del eclipse solar, la preparación
+              previa es parte fundamental del resultado. La elección
+              del lugar, las pruebas y el seguimiento de cada fase
+              requieren tiempo y atención.
+            </p>
+
+            <p>
+              También es una forma de aprender: cada salida aporta
+              experiencia, nuevas preguntas y motivos para seguir
+              explorando la relación entre la Tierra y el cielo.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- CIERRE -->
+
+      <section class="closing-section">
+
+        <div class="closing-inner">
+
+          <p class="eyebrow">Paisaje · Cielo · Tiempo</p>
+
+          <h2>Mirar más allá del horizonte</h2>
+
+          <p>
+            Para mí, fotografiar el cielo es una manera de conectar el
+            paisaje que tenemos delante con una escala mucho mayor.
+            Cada imagen es una oportunidad para descubrir algo nuevo
+            y compartirlo con quienes se detienen a mirar.
+          </p>
+
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+      <span>David García · Astrofotógrafo</span>
+      <span>Astrofotografía de paisaje</span>
+    </div>
+
+  </footer>
+
+</body>
+</html>

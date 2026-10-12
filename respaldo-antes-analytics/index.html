@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>David García - Astrofotógrafo</title>
+  <meta name="description" content="Astrofotografía de paisaje de David García: Vía Láctea, lugares históricos, eclipses y proyectos fotográficos bajo el cielo nocturno.">
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --text: #202020;
+      --muted: #6d6d6d;
+      --line: #e7e7e7;
+      --page-width: 1440px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      width: 100%;
+      border-bottom: 1px solid var(--line);
+      background: #ffffff;
+    }
+
+    .header-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 24px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand,
+    .brand:link,
+    .brand:visited,
+    .brand:hover,
+    .brand:active {
+      flex-shrink: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      flex-wrap: wrap;
+    }
+
+    .navigation a {
+      font-size: 12px;
+      color: #505050;
+      transition: color 0.2s ease;
+    }
+
+    .navigation a:hover {
+      color: #000000;
+    }
+
+    .hero {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 64px 5% 74px;
+    }
+
+    .hero-heading {
+      max-width: 760px;
+      margin: 0 0 32px;
+    }
+
+    .eyebrow {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 5.2vw, 70px);
+      line-height: 1.08;
+      font-weight: 400;
+      letter-spacing: -0.045em;
+    }
+
+    .intro {
+      max-width: 540px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #14171d;
+    }
+
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 50%;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-image:hover img {
+      transform: scale(1.015);
+    }
+
+    .image-note {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .projects {
+      padding: 62px 5% 84px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 27px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+    }
+
+    .section-link {
+      font-size: 12px;
+      color: var(--muted);
+      border-bottom: 1px solid #bcbcbc;
+      padding-bottom: 4px;
+    }
+
+    .section-link:hover {
+      color: #111111;
+      border-color: #111111;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 24px;
+    }
+
+    .project-card {
+      min-width: 0;
+    }
+
+    /* Imágenes de proyectos: fondo blanco, sin marco gris */
+    .project-image {
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      background: #ffffff;
+    }
+
+    .project-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: #ffffff;
+      border: none;
+      box-shadow: none;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.015);
+    }
+
+    .project-card h3 {
+      margin: 14px 0 6px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .project-title-link:hover h3 {
+      color: #666666;
+    }
+
+    .more-projects {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    .more-projects a {
+      display: inline-block;
+      padding: 11px 20px;
+      border: 1px solid #cccccc;
+      font-size: 12px;
+      transition: border-color 0.2s ease;
+    }
+
+    .more-projects a:hover {
+      border-color: #222222;
+    }
+
+    .site-footer {
+      padding: 26px 5%;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (min-width: 1500px) {
+      .hero,
+      .projects {
+        padding-left: 72px;
+        padding-right: 72px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        padding: 20px 6%;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+      }
+
+      .brand {
+        font-size: 16px;
+      }
+
+      .navigation {
+        width: 100%;
+        gap: 13px 21px;
+      }
+
+      .navigation a {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 42px 0 48px;
+      }
+
+      .hero-heading {
+        padding: 0 6%;
+        margin-bottom: 25px;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+        margin-bottom: 13px;
+      }
+
+      h1 {
+        font-size: clamp(38px, 10vw, 54px);
+        line-height: 1.08;
+      }
+
+      .intro {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      .hero-image {
+        aspect-ratio: 4 / 4.6;
+      }
+
+      .hero-image img {
+        object-position: 55% center;
+      }
+
+      .image-note {
+        padding: 0 6%;
+        font-size: 10px;
+      }
+
+      .projects {
+        padding: 43px 6% 56px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 22px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .project-image {
+        aspect-ratio: 4 / 3;
+      }
+
+      .site-footer {
+        padding: 23px 6%;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        David García - Astrofotógrafo
+      </a>
+
+      <nav class="navigation" aria-label="Navegación principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="instagram.html">Instagram</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="hero-heading">
+        <p class="eyebrow">Astrofotografía de paisaje</p>
+
+        <h1>La noche también forma parte del paisaje.</h1>
+
+        <p class="intro">
+          Fotografías del cielo nocturno en diálogo con el paisaje,
+          los lugares históricos y las historias que los hacen únicos.
+        </p>
+      </div>
+
+      <figure>
+        <div class="hero-image">
+          <img
+            src="images/Ermita-de-Santa-Ana.jpg"
+            alt="Vía Láctea sobre la ermita de Santa Ana"
+            fetchpriority="high"
+          >
+        </div>
+
+        <figcaption class="image-note">
+          <span>David García - Astrofotógrafo</span>
+          <span>Fotografía de paisaje nocturno</span>
+        </figcaption>
+      </figure>
+
+    </section>
+
+    <section class="projects" id="proyectos">
+      <div class="section-inner">
+
+        <div class="section-heading">
+          <h2>Proyectos destacados</h2>
+          <a class="section-link" href="proyectos.html">
+            Explorar proyectos →
+          </a>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+
+            <a
+              class="project-title-link"
+              href="proyecto-eclipse-escamilla.html"
+              aria-label="Ver el proyecto El eclipse solar sobre Escamilla"
+            >
+              <div class="project-image">
+                <img
+                  src="images/eclipse-solar-escamilla.jpg"
+                  alt="Eclipse solar sobre el paisaje de Escamilla"
+                  loading="lazy"
+                >
+              </div>
+
+              <h3>El eclipse solar sobre Escamilla</h3>
+            </a>
+
+            <p>
+              Planificación, paisaje y una secuencia construida
+              a lo largo de varias horas.
+            </p>
+
+          </article>
+
+          <article class="project-card">
+
+            <a
+              class="project-title-link"
+              href="proyectos.html"
+              aria-label="Ver este proyecto y otros trabajos en la página de proyectos"
+            >
+              <div class="project-image">
+                <img
+                  src="images/via-lactea-lavanda.jpg"
+                  alt="La Vía Láctea sobre los campos de lavanda"
+                  loading="lazy"
+                >
+              </div>
+
+              <h3>La Vía Láctea sobre los campos de lavanda</h3>
+            </a>
+
+            <p>
+              El cielo nocturno se extiende sobre el paisaje de lavanda,
+              uniendo la inmensidad de la galaxia con los colores
+              y las formas de la tierra.
+            </p>
+
+          </article>
+
+        </div>
+
+        <div class="more-projects">
+          <a href="proyectos.html">Descubrir todos los proyectos →</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>David García - Astrofotógrafo</span>
+      <span>Astrofotografía de paisaje</span>
+    </div>
+  </footer>
+
+</body>
+</html>
