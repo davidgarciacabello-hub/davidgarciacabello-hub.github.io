@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Proyectos | David García - Astrofotógrafo</title>
+
+  <meta name="description" content="Proyectos de astrofotografía de paisaje de David García: el eclipse solar sobre Escamilla, Santa María de Melque, Los Tormos de Sales, el airglow sobre Los Frailes del Reato y la Vía Láctea sobre Recópolis.">
+
+  <style>
+    :root {
+      --page-width: 1200px;
+      --text: #202020;
+      --muted: #707070;
+      --line: #e8e8e8;
+      --background: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      padding: 25px 5%;
+      background: #ffffff;
+    }
+
+    .header-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand,
+    .brand:link,
+    .brand:visited,
+    .brand:hover,
+    .brand:active {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      white-space: nowrap;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      font-size: 12px;
+      color: #555555;
+    }
+
+    .main-nav a:hover {
+      color: #000000;
+    }
+
+    .page-intro {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 76px 5% 45px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.08;
+      font-weight: 400;
+      letter-spacing: -0.045em;
+    }
+
+    .intro-text {
+      max-width: 590px;
+      margin: 23px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .projects {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 25px 5% 100px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 48px 28px;
+      align-items: start;
+    }
+
+    .project-card {
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .project-image {
+      width: 100%;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .project-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 0.4s ease;
+    }
+
+    .project-image-link {
+      display: block;
+    }
+
+    .project-image-link:hover img {
+      transform: scale(1.015);
+    }
+
+    .project-number {
+      margin: 23px 0 10px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 25px;
+      line-height: 1.3;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+    }
+
+    .project-title-link:hover {
+      color: #666666;
+    }
+
+    .project-description {
+      max-width: 100%;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .project-action {
+      display: inline-block;
+      margin-top: 18px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #bcbcbc;
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.6;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .project-action:hover {
+      color: #666666;
+      border-color: #222222;
+    }
+
+    .project-action:focus-visible,
+    .main-nav a:focus-visible,
+    .brand:focus-visible {
+      outline: 2px solid #555555;
+      outline-offset: 4px;
+    }
+
+    .project-status {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 5%;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 20px 6%;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .main-nav {
+        gap: 15px 21px;
+      }
+
+      .page-intro {
+        padding: 54px 6% 35px;
+      }
+
+      .projects {
+        padding: 20px 6% 60px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .project-image {
+        height: 360px;
+      }
+
+      h2 {
+        font-size: 23px;
+      }
+
+      .site-footer {
+        padding: 23px 6%;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        David García - Astrofotógrafo
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html" aria-current="page">Proyectos</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="instagram.html">Instagram</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-intro">
+      <p class="eyebrow">Astrofotografía de paisaje</p>
+
+      <h1>Proyectos</h1>
+
+      <p class="intro-text">
+        Cada proyecto comienza con un lugar, una historia y la planificación
+        necesaria para encontrar el cielo adecuado. Aquí reúno algunas de esas
+        experiencias en las que el paisaje, el firmamento y los fenómenos
+        naturales comparten protagonismo.
+      </p>
+    </section>
+
+    <section class="projects" aria-label="Proyectos fotográficos">
+
+      <div class="project-grid">
+
+        <!-- PROYECTO 01: ECLIPSE SOLAR -->
+
+        <article class="project-card">
+
+          <a
+            class="project-image-link"
+            href="proyecto-eclipse-escamilla.html"
+            aria-label="Ver el proyecto El eclipse solar sobre Escamilla"
+          >
+            <div class="project-image">
+              <img
+                src="images/eclipse-solar-escamilla.jpg"
+                alt="Eclipse solar sobre el paisaje de Escamilla"
+              >
+            </div>
+          </a>
+
+          <p class="project-number">PROYECTO 01</p>
+
+          <h2>
+            <a class="project-title-link" href="proyecto-eclipse-escamilla.html">
+              El eclipse solar sobre Escamilla
+            </a>
+          </h2>
+
+          <p class="project-description">
+            La planificación del eclipse y su evolución sobre el paisaje,
+            en diálogo con la iglesia y el horizonte de Escamilla.
+          </p>
+
+          <a class="project-action" href="proyecto-eclipse-escamilla.html">
+            Ver proyecto →
+          </a>
+
+        </article>
+
+
+        <!-- PROYECTO 02: SANTA MARÍA DE MELQUE -->
+
+        <article class="project-card">
+
+          <a
+            class="project-image-link"
+            href="proyecto-santa-maria-melque.html"
+            aria-label="Ver el proyecto Santa María de Melque"
+          >
+            <div class="project-image">
+              <img
+                src="images/orion-santa-maria-melque.jpg"
+                alt="Orión sobre la ermita de Santa María de Melque"
+                loading="lazy"
+              >
+            </div>
+          </a>
+
+          <p class="project-number">PROYECTO 02</p>
+
+          <h2>
+            <a class="project-title-link" href="proyecto-santa-maria-melque.html">
+              Santa María de Melque
+            </a>
+          </h2>
+
+          <p class="project-description">
+            Arquitectura histórica y cielo nocturno, desde la presencia
+            de Orión hasta una panorámica que reúne paisaje y firmamento.
+          </p>
+
+          <a class="project-action" href="proyecto-santa-maria-melque.html">
+            Ver proyecto →
+          </a>
+
+        </article>
+
+
+        <!-- PROYECTO 03: LOS TORMOS DE SALES -->
+
+        <article class="project-card">
+
+          <a
+            class="project-image-link"
+            href="proyecto-tormos-de-sales.html"
+            aria-label="Ver el proyecto Los Tormos de Sales"
+          >
+            <div class="project-image">
+              <img
+                src="images/tormos-invierno.jpg"
+                alt="Vía Láctea de invierno sobre Los Tormos de Sales"
+                loading="lazy"
+              >
+            </div>
+          </a>
+
+          <p class="project-number">PROYECTO 03</p>
+
+          <h2>
+            <a class="project-title-link" href="proyecto-tormos-de-sales.html">
+              Los Tormos de Sales
+            </a>
+          </h2>
+
+          <p class="project-description">
+            El paisaje de Los Tormos de Sales bajo el cielo de invierno,
+            con la Vía Láctea como protagonista de la composición.
+          </p>
+
+          <a class="project-action" href="proyecto-tormos-de-sales.html">
+            Ver proyecto →
+          </a>
+
+        </article>
+
+
+        <!-- PROYECTO 04: AIRGLOW -->
+
+        <article class="project-card">
+
+          <div class="project-image">
+            <img
+              src="images/los-frailes-del-reato.jpg"
+              alt="Resplandor verdoso del airglow sobre Los Frailes del Reato"
+              loading="lazy"
+            >
+          </div>
+
+          <p class="project-number">PROYECTO 04</p>
+
+          <h2>Los Frailes del Reato · Airglow verdoso</h2>
+
+          <p class="project-description">
+            Mientras fotografiaba este paisaje nocturno apareció un
+            resplandor verdoso inesperado. Era airglow, una emisión natural
+            de luz de las capas altas de la atmósfera. La sensibilidad de la
+            cámara y la exposición nocturna permitieron registrar este
+            fenómeno sutil, convirtiendo una sesión de paisaje en un
+            descubrimiento sorprendente.
+          </p>
+
+          <span class="project-status">
+            Página del proyecto próximamente
+          </span>
+
+        </article>
+
+
+        <!-- PROYECTO 05: RECÓPOLIS -->
+
+        <article class="project-card">
+
+          <div class="project-image">
+            <img
+              src="images/visigodos.jpg"
+              alt="La Vía Láctea sobre las ruinas visigodas de Recópolis, en Guadalajara"
+              loading="lazy"
+            >
+          </div>
+
+          <p class="project-number">PROYECTO 05</p>
+
+          <h2>La Vía Láctea sobre Recópolis</h2>
+
+          <p class="project-description">
+            En Guadalajara, las huellas del reino visigodo y el cielo nocturno
+            se encuentran en un lugar excepcional: Recópolis, la ciudad
+            fundada por Leovigildo en el año 578 en honor a su hijo Recaredo.
+
+            Fotografiar la Vía Láctea completa sobre este paisaje es unir dos
+            escalas de tiempo: la historia de una ciudad que nació hace más
+            de catorce siglos y la luz de nuestra galaxia, extendiéndose
+            sobre el horizonte.
+
+            Una imagen en la que el patrimonio y el firmamento comparten
+            protagonismo.
+          </p>
+
+          <span class="project-status">
+            Página del proyecto próximamente
+          </span>
+
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>David García - Astrofotógrafo</span>
+      <span>Astrofotografía de paisaje</span>
+    </div>
+  </footer>
+
+</body>
+</html>

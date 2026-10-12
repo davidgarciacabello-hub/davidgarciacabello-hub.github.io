@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contacto | David García - Astrofotógrafo</title>
+  <meta name="description" content="Contacta con David García para consultas, colaboraciones y proyectos relacionados con la astrofotografía de paisaje.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #242424;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .contenedor {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 23px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .navegacion {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    a.marca,
+    a.marca:link,
+    a.marca:visited,
+    a.marca:hover,
+    a.marca:active {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      text-decoration: none;
+      color: #242424;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: #555;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #111;
+    }
+
+    nav a.activo {
+      color: #111;
+      font-weight: 600;
+    }
+
+    .introduccion {
+      max-width: 760px;
+      margin: 90px auto 55px;
+      text-align: center;
+    }
+
+    .categoria {
+      margin: 0 0 14px;
+      color: #777;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(34px, 5vw, 48px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .introduccion > p:last-child {
+      max-width: 640px;
+      margin: 0 auto;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .contacto {
+      max-width: 790px;
+      margin: 0 auto 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .bloque {
+      padding-top: 26px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    .bloque h2 {
+      margin: 0 0 16px;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .bloque p {
+      margin: 0 0 18px;
+      color: #666;
+      font-size: 15px;
+    }
+
+    .enlace-contacto {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 11px 20px;
+      border: 1px solid #ccc;
+      font-size: 13px;
+      text-decoration: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .enlace-contacto:hover {
+      border-color: #222;
+    }
+
+    .volver {
+      margin-top: 65px;
+      text-align: center;
+    }
+
+    .volver a {
+      color: #555;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .volver a:hover {
+      color: #111;
+    }
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid #eee;
+      color: #777;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 650px) {
+      .navegacion {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px 16px;
+      }
+
+      .introduccion {
+        margin-top: 55px;
+      }
+
+      .introduccion > p:last-child {
+        font-size: 15px;
+      }
+
+      .contacto {
+        grid-template-columns: 1fr;
+        gap: 38px;
+        margin-bottom: 70px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="contenedor navegacion">
+
+      <a class="marca" href="index.html">
+        David García - Astrofotógrafo
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="equipo.html">Equipo</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="instagram.html">Instagram</a>
+        <a class="activo" href="contacto.html" aria-current="page">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="contenedor">
+
+    <section class="introduccion">
+      <p class="categoria">Contacto</p>
+
+      <h1>Hablemos de fotografía</h1>
+
+      <p>
+        Si quieres consultar algo sobre mis fotografías, compartir una
+        propuesta o hablar de un posible proyecto relacionado con la
+        astrofotografía de paisaje, estaré encantado de leerte.
+      </p>
+    </section>
+
+    <section class="contacto" aria-label="Formas de contacto">
+
+      <div class="bloque">
+        <h2>Escríbeme</h2>
+
+        <p>
+          Para consultas, propuestas o colaboraciones, puedes contactar
+          conmigo por correo electrónico.
+        </p>
+
+        <!-- Sustituye el correo de ejemplo por tu dirección real -->
+        <a class="enlace-contacto"
+           href="mailto:davidgarciacabello@gmail.com?subject=Consulta%20sobre%20astrofotograf%C3%ADa">
+          Enviar un correo
+        </a>
+      </div>
+
+      <div class="bloque">
+        <h2>También en Instagram</h2>
+
+        <p>
+          Comparto mis fotografías de paisaje nocturno, la Vía Láctea
+          y otros fenómenos astronómicos en mi perfil de Instagram.
+        </p>
+
+        <a class="enlace-contacto"
+           href="https://www.instagram.com/davidgarciacabello/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Visitar mi Instagram ↗
+        </a>
+      </div>
+
+    </section>
+
+    <div class="volver">
+      <a href="proyectos.html">← Volver a los proyectos</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      <p>David García - Astrofotógrafo</p>
+      <p>Astrofotografía de paisaje</p>
+    </div>
+  </footer>
+
+</body>
+</html>
