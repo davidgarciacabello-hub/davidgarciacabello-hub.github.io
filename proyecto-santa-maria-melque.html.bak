@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7V6C8J3MK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F7V6C8J3MK');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Santa María de Melque bajo las estrellas | David García</title>
+
+  <meta
+    name="description"
+    content="Un recorrido fotográfico por Santa María de Melque: la constelación de Orión sobre la ermita y una panorámica de 360 grados que conecta el paisaje con el cielo nocturno."
+  >
+
+  <meta name="author" content="David García">
+
+  <style>
+    :root {
+      --page-width: 1200px;
+      --text-width: 820px;
+      --text-color: #242424;
+      --muted-color: #707070;
+      --border-color: #e8e8e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text-color);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-header {
+      width: 100%;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-inner {
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 22px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      color: var(--text-color);
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .main-nav a {
+      color: #555;
+      font-size: 13px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+      color: #000;
+    }
+
+    .project-header {
+      max-width: var(--text-width);
+      margin: 0 auto;
+      padding: 78px 5% 42px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--muted-color);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 4.5vw, 48px);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .project-subtitle {
+      max-width: 650px;
+      margin: 20px auto 0;
+      color: #666;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .project-intro {
+      max-width: var(--text-width);
+      margin: 0 auto;
+      padding: 0 5% 52px;
+    }
+
+    .project-intro p,
+    .story p {
+      margin: 0 0 20px;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .image-section {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 4%;
+    }
+
+    .project-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: var(--page-width);
+      max-height: 1000px;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+
+    .image-caption {
+      max-width: var(--text-width);
+      margin: 14px auto 0;
+      padding: 0 5%;
+      color: var(--muted-color);
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: right;
+    }
+
+    .story {
+      max-width: var(--text-width);
+      margin: 0 auto;
+      padding: 58px 5% 76px;
+    }
+
+    .story + .image-section {
+      margin-top: 0;
+    }
+
+    .section-number {
+      margin: 0 0 10px;
+      color: var(--muted-color);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+    }
+
+    .project-divider {
+      max-width: var(--text-width);
+      margin: 0 auto;
+      border: 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .project-end {
+      padding: 20px 5% 86px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      padding: 12px 22px;
+      border: 1px solid #d8d8d8;
+      color: var(--text-color);
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .back-link:hover {
+      background: #f7f7f7;
+      border-color: #aaa;
+    }
+
+    .site-footer {
+      padding: 25px 5%;
+      border-top: 1px solid var(--border-color);
+      color: var(--muted-color);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .main-nav {
+        justify-content: center;
+        gap: 12px 18px;
+      }
+
+      .project-header {
+        padding-top: 56px;
+      }
+
+      .image-section {
+        padding: 0 3%;
+      }
+
+      .story {
+        padding-top: 44px;
+        padding-bottom: 54px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand {
+        white-space: normal;
+        text-align: center;
+      }
+
+      .main-nav {
+        gap: 10px 14px;
+      }
+
+      .main-nav a {
+        font-size: 12px;
+      }
+
+      .project-subtitle {
+        font-size: 15px;
+      }
+
+      .project-intro p,
+      .story p {
+        font-size: 15px;
+      }
+
+      .image-section {
+        padding: 0 2%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        David García · Astrofotógrafo
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html" aria-current="page">Proyectos</a>
+        <a href="index.html#equipo">Equipo</a>
+        <a href="index.html#sobre-mi">Sobre mí</a>
+       <a href="instagram.html">Instagram</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="project-header">
+      <p class="eyebrow">Proyecto de astrofotografía</p>
+      <h1>Santa María de Melque</h1>
+      <p class="project-subtitle">
+        Una ermita con siglos de historia, dos miradas fotográficas
+        y un cielo que invita a detenerse.
+      </p>
+    </section>
+
+   
+<section class="project-intro">
+  <p>
+    La ermita de Santa María de Melque tiene una historia que se
+    remonta a siglos atrás. Fotografiarla bajo el cielo nocturno
+    era una oportunidad para unir su arquitectura con distintas
+    escenas del firmamento.
+  </p>
+
+  <p>
+    Esta sesión fue planificada con antelación para aprovechar
+    una misma noche y obtener tres resultados: Orión sobre la
+    ermita, la Vía Láctea de invierno y la Vía Láctea de verano.
+  </p>
+
+  <p>
+    Más de ocho horas de trabajo dieron forma a este proyecto,
+    que reúne dos maneras de mirar el mismo lugar: una fotografía
+    centrada en Orión y una panorámica de 360° que integra el
+    paisaje con las distintas escenas de la Vía Láctea.
+  </p>
+</section>
+
+
+    <!-- PRIMERA IMAGEN: ORIÓN -->
+
+    <section class="image-section" aria-label="Orión sobre la ermita">
+      <img
+        class="project-image"
+        src="images/orion-santa-maria-melque.jpg"
+        alt="La constelación de Orión sobre la ermita de Santa María de Melque durante una noche de invierno"
+        fetchpriority="high"
+      >
+      <p class="image-caption">
+        Orión sobre Santa María de Melque · Una sesión independiente
+      </p>
+    </section>
+
+    <section class="story">
+      
+<p class="section-number">01 · Una constelación sobre la historia</p>
+<h2>Orión sobre Santa María de Melque</h2>
+
+<p>
+  La posición de Orión se planificó previamente para encontrar
+  el momento y el encuadre adecuados, integrando la constelación
+  con la arquitectura de la ermita.
+</p>
+
+<p>
+  La intención era que el cielo y el conjunto histórico compartieran
+  protagonismo en una misma composición. Para conseguirlo, la sesión
+  se organizó teniendo en cuenta los objetivos fotográficos previstos
+  para aquella noche.
+</p>
+
+<p>
+  El resultado es una mirada concreta sobre Santa María de Melque:
+  una fotografía en la que la presencia de Orión conecta la historia
+  del lugar con el cielo invernal.
+</p>
+
+    </section>
+
+    <hr class="project-divider">
+
+    <!-- SEGUNDA IMAGEN: PANORÁMICA 360 -->
+
+    <section class="image-section" aria-label="Panorámica de 360 grados de Melque">
+      <img
+        class="project-image"
+        src="images/360-melque.jpg"
+        alt="Panorámica de 360 grados de Santa María de Melque que reúne el paisaje y distintas escenas del cielo nocturno"
+        loading="lazy"
+      >
+      <p class="image-caption">
+        Panorámica de 360° · Paisaje y cielo nocturno
+      </p>
+    </section>
+
+    <section class="story">
+     
+<p class="section-number">02 · Una mirada que se amplía</p>
+<h2>Melque en 360 grados</h2>
+
+<p>
+  La panorámica amplía la mirada más allá del encuadre de Orión.
+  El paisaje y el cielo se integran en una composición envolvente
+  que permite recorrer visualmente el entorno de la ermita.
+</p>
+
+<p>
+  En este trabajo se reúnen las escenas de la Vía Láctea de invierno
+  y de verano, planificadas y fotografiadas durante la misma sesión.
+  Cada una muestra una perspectiva diferente del cielo, y juntas
+  permiten apreciar cómo cambia su presencia sobre un mismo paisaje.
+</p>
+
+<p>
+  Tras más de ocho horas de trabajo, esta panorámica completa la
+  fotografía de Orión y ofrece una visión más amplia de Santa María
+  de Melque. Son dos resultados de una misma planificación, con
+  encuadres distintos y una intención común: unir el paisaje,
+  la arquitectura y el cielo nocturno.
+</p>
+
+    </section>
+
+    <section class="project-end">
+      <a class="back-link" href="proyectos.html">
+        ← Volver a proyectos
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    © David García · Astrofotografía de paisaje
+  </footer>
+
+</body>
+</html>
