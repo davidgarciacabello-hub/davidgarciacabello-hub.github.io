@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+
+Sitemap: https://davidgarciacabello-hub.github.io/sitemap.xml
