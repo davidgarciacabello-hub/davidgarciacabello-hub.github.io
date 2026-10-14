@@ -186,14 +186,28 @@
     }
 
     @media (max-width: 650px) {
-      .navegacion {
-        align-items: flex-start;
-        flex-direction: column;
-      }
+     
+.navegacion {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 14px;
+}
 
-      nav {
-        gap: 12px 16px;
-      }
+nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+nav a {
+  font-size: 9px;
+  white-space: nowrap;
+  letter-spacing: -0.3px;
+  flex-shrink: 1;
+}
 
       .introduccion {
         margin-top: 55px;
