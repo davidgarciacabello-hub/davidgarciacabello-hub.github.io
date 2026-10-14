@@ -311,18 +311,19 @@
         font-size: 16px;
       }
 
-      .navigation {
+  .navigation {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  column-gap: 24px;
-  row-gap: 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
 }
 
-      .navigation a {
-        font-size: 12px;
-      }
-
+.navigation a {
+  font-size: 10px;
+  white-space: nowrap;
+}
       .hero {
         padding: 42px 0 48px;
       }
