@@ -312,9 +312,12 @@
       }
 
       .navigation {
-        width: 100%;
-        gap: 13px 21px;
-      }
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 24px;
+  row-gap: 16px;
+}
 
       .navigation a {
         font-size: 12px;
