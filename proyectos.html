@@ -247,8 +247,20 @@
       }
 
       .main-nav {
-        gap: 15px 21px;
-      }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.main-nav a {
+  font-size: 10px;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
 
       .page-intro {
         padding: 54px 6% 35px;
