@@ -1,0 +1,140 @@
+/* Shared header sizing and behavior across the site's main pages. */
+body > header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+body > header > .header-inner,
+body > header > .navegacion,
+body > header > .nav,
+body > header > .contenedor {
+  box-sizing: border-box;
+  width: min(1200px, 90%);
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+body > header .header-inner,
+body > header .navegacion,
+body > header .nav {
+  flex-wrap: nowrap;
+  gap: 30px;
+}
+
+body > header nav {
+  gap: 27px;
+}
+
+body > header .brand,
+body > header a.brand:link,
+body > header a.brand:visited,
+body > header a.brand:hover,
+body > header a.brand:active,
+body > header .marca,
+body > header a.marca:link,
+body > header a.marca:visited,
+body > header a.marca:hover,
+body > header a.marca:active {
+  color: #202020;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-transform: none;
+}
+
+body > header nav a,
+body > header nav a:visited,
+body > header nav a[aria-current="page"],
+body > header nav a.activo {
+  color: #505050;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-transform: none;
+}
+
+body > header nav a:hover,
+body > header nav a:active {
+  color: #000;
+}
+
+body > header nav a:is([aria-current="page"], .activo) {
+  color: #505050;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  text-transform: none;
+}
+
+body > header nav a:is([aria-current="page"], .activo):hover,
+body > header nav a:is([aria-current="page"], .activo):active {
+  color: #000;
+}
+
+@media (max-width: 760px) {
+  body > header {
+    height: 112px;
+  }
+
+  body > header > .header-inner,
+  body > header > .navegacion,
+  body > header > .nav,
+  body > header > .contenedor {
+    height: 100%;
+    width: 90%;
+  }
+
+  body > header .header-inner,
+  body > header .navegacion,
+  body > header .nav {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    gap: 17px;
+  }
+
+  body > header nav {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body > header nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  body > header nav a {
+    flex: 0 1 auto;
+    font-size: 9px;
+    white-space: nowrap;
+  }
+
+  body > header nav a:is([aria-current="page"], .activo) {
+    font-size: 9px;
+  }
+}
